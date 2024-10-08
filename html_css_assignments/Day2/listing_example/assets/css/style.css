@@ -1,0 +1,42 @@
+.main .unorder ul{
+  list-style-image: url('../img/img1.jpg');
+
+}
+
+.main .order ol{
+  list-style: lower-alpha;
+}
+
+.main .nested ul ul{
+  list-style: circle;
+}
+
+.main .nested ul ul ul{
+  list-style: square;
+}
+
+.main .custom ul{
+  list-style: none;
+}
+.main .custom li{
+  position: relative;
+  padding-left: 30px;
+}
+
+.main .custom li::before{
+  content: '>>>';
+  color: blue;
+  position: absolute;
+  left: 0;
+}
+
+.main .nav-menu ul{
+  list-style: none;
+}
+.main .nav-menu li{
+  display: inline;
+}
+
+.main .desc-list dt {
+  font-weight: bold;
+}

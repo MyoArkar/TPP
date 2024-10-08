@@ -1,0 +1,33 @@
+.main table,th,td{
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.main table{
+  width: 100%;
+}
+.main td{
+  width: 25%;
+}
+
+.main th,td{
+  padding: 20px 0;
+}
+
+.main .vertical td{
+  vertical-align: top;
+}
+.main tr:first-child{
+  background-color: antiquewhite;
+}
+
+.main .bg{
+  background: whitesmoke;
+}
+.main td:nth-child(2), td:nth-child(3){
+  text-align: center;
+}
+
+.main td:last-child{
+  text-align: end;
+}
