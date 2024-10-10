@@ -1,0 +1,138 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+  --white:#fff;
+  --black:#000;
+  --orange:orange;
+  --primary-font:"Roboto";
+  --secondary-font:"Noto Serif";
+  --whitesmoke: #D7EDDB;
+  --lightgray:rgb(108, 87, 87);
+}
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  margin: 0 auto;
+ font-family: "Roboto", "Noto Serif", sans-serif;
+  font-size: 16px;
+  color: var(--black);
+  line-height: 1.7;
+  background-color: var(--whitesmoke);
+}
+a{
+  text-decoration: none;
+}
+ul{
+  list-style: none;
+}
+/* header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--white);
+  box-shadow: 0px 3px 3px 2px rgb(183, 168, 168);
+}
+.header nav{
+  padding:4px 0 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .logo{
+  color: var(--orange);
+  font-size: 30px;
+  font-family: var(--primary-font);
+}
+.header nav ul{
+  display: flex;
+  width: 160px;
+}
+.header nav li{
+  margin-right: 47px;
+}
+/* content */
+.content{
+  margin-top: 55px;
+}
+.content .left{
+  position: fixed;
+  top: 55px;
+  left: 0;
+  font-size: 14px;
+  width: 16%;
+  color: var(--white);
+  background: var(--black);
+  padding: 32px 0 185px 20px;
+}
+.content .left .list li{
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+.content .left .list li > i{
+  margin-right: 5px;
+}
+
+.content .left > .list {
+  margin-bottom: 50px;
+}
+
+.content .right{
+  width: 84%;
+  margin-left: 250px;
+}
+.content .right .top{
+   padding: 20px 20px 0;
+   margin-bottom: 20px;
+}
+.content form{
+  margin-top: 20px;
+  background: var(--white);
+  padding: 20px;
+  box-shadow: 0px 3px 3px 2px rgb(183, 168, 168);
+}
+.content form .form-ele > label{
+  font-weight: bold;
+}
+.content form .form-ele:not(.form-btn){
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.content .form-ele > input , .form-ele  select , .form-ele  textarea {
+  height: 40px;
+  padding-left: 20px;
+  border: 1px solid var(--whitesmoke);
+}
+.content .form-ele textarea{
+  height: 100px;
+  color: var(--lightgray);
+}
+.content form .form-btn input {
+  padding: 0;
+  width: 150px;
+  border: 0;
+  border-radius: 5px;
+}
+.content form .form-btn input:first-child{
+  background:var(--orange);
+  color: var(--white);
+}
+
+.content .footer{
+  color: var(--white);
+  background-color: var(--lightgray);
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+.content .footer span:first-child{
+  margin-right: 20px;
+}
