@@ -120,6 +120,7 @@ ul{
   width: 150px;
   border: 0;
   border-radius: 5px;
+  box-shadow: 0px 3px 3px 2px rgb(183, 168, 168);
 }
 .content form .form-btn input:first-child{
   background:var(--orange);
