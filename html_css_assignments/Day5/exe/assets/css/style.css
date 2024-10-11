@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+  --white:#fff;
+  --black:#000;
+  --orange:orange;
+  --primary-font:"Roboto";
+  --secondary-font:"Noto Serif";
+  --whitesmoke: #D7EDDB;
+  --lightgray:rgb(108, 87, 87);
+}
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: "Roboto" , "Noto Serif" , sans-serif;
+  font-size: 16px;
+  color: var();
+}
+h1, h2 , h3 , h4 , h5 ,h6{
+  font-family: var(--secondary-font);
+}
+a{
+  color: var(--white);
+  text-decoration: none;
+}
+/* header */
+header{
+  position: relative;
+}
+header nav{
+  background: var(--orange);
+  display: flex;
+  justify-content: space-between;
+}
+header #main-menu{
+  list-style: none;
+  display: flex;
+  width: 40%;
+  justify-content: space-between;
+}
+header nav #menu-bar{
+  display: none;
+}
+
+/* container */
+.container{
+  margin: 0 auto;
+  max-width : 1140px;
+
+}
+.container .flex-box{
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 16px;
+  justify-content: space-between;
+}
+.container .flex-item{
+  width: calc(calc(100% / 3) - 16px);
+}
+.container .flex-item img{
+   transition: all 1s ease-in-out 1s;
+}
+.container .flex-item:hover img{
+  transform: scale(1.5);
+}
+.container .img-box {
+  overflow: hidden;
+}
+.container .img-box img{
+  width: 100%;
+  vertical-align: middle;
+}
+.container .flex-item .btn{
+  margin-top: 10px;
+  display: block;
+  background-color: var(--orange);
+  color: var(--white);
+  text-align: center;
+  padding: 10px 0;
+  box-shadow: 0px 3px 3px 2px rgb(183, 168, 168);
+  transition: all 1s ease-in-out 1s;
+}
+.container .flex-item .btn:hover{
+  transform:skewX(-20deg);
+}
+/* media 992 */
+@media screen and (max-width:992px) {
+  .container{
+    padding: 0 20px;
+  }
+  .container .flex-item{
+    width: calc(calc(100% / 2) - 16px);
+  }
+  header #main-menu{
+    display: none;
+  }
+  header nav #menu-bar{
+    display: block;
+  }
+}
+@media screen and (max-width:576px) {
+  .container .flex-item{
+    width: 100%;
+  }
+  header #main-menu{
+    width: 100%;
+    display: block;
+    position: absolute;
+    background: var(--whitesmoke);
+    left: 0;
+    top: 18.7px;
+  }
+}
