@@ -234,7 +234,7 @@ img{
 }
 .sale .course .sale-title{
   font-size: 40px;
-  clip-path: circle(80% at 50% -30%);
+  clip-path: ellipse(60% 80% at 50% 20%);
   padding: 40px 0 90px;
   margin-bottom: 20px;
 }
