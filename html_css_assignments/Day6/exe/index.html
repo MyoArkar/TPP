@@ -91,9 +91,7 @@
           <div class="img-box">
             <img src="assets/images/img1.png" alt="tour">
             <span>$36/night</span>
-            <i class="fa-regular fa-heart"></i>
-            <span>$36/night</span>
-            <i class="fa-regular fa-heart"></i>
+            <i class="fa-regular fa-heart" id="heart"></i>
           </div>
           <h3>Trickel Creek Ranch</h3>
           <p>Book unique camping experiences on over 300,000 campsites.</p>
@@ -233,7 +231,7 @@
 
   <footer class="footer outter">
     <div class="inner">
-      <span class="sticky">
+      <span class="sticky" id="up-arrow">
         <i class="fa-solid fa-arrow-up"></i>
       </span>
       <div class="ft-content">
@@ -285,12 +283,27 @@
   </footer>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      // alert('asdfa');
       var menubar = document.getElementById('menu-bar');
       var mainmenu = document.getElementById('menu');
+      var icons = document.querySelectorAll(".fa-heart");
+      var uparrow = document.getElementById("up-arrow");
       menubar.addEventListener('click', function () {
         mainmenu.classList.toggle("updown");
-      })
+      });
+      
+      icons.forEach(function (icon) {
+        icon.addEventListener("click", function () {
+          icon.classList.toggle("fa-regular");
+          icon.classList.toggle("fa-solid");
+        });
+      });
+
+      uparrow.addEventListener('click', function () {
+        window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+    });
+      });
     })
   </script>
 </body>

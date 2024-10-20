@@ -30,6 +30,9 @@ ro 18 16 14
   padding: 0;
   box-sizing: border-box;
 }
+body::-webkit-scrollbar{
+  display: none;
+}
 body{
   background: var(--bdbg);
   font-family: "Roboto", "Archivo", sans-serif;
@@ -193,7 +196,7 @@ a{
 }
 .explore .tours .tour-box{
   width: calc(calc(100% / 4) - 20px);
-  padding: 20px;
+  padding: 20px 20px 40px;
   background: var(--white);
   text-align: center;
   border-radius: 25px;
@@ -206,16 +209,21 @@ a{
   vertical-align: middle;
   border-radius: 25px;
 }
-.explore .tour-box  span{
+.explore .tour-box .img-box span{
   position: absolute;
-  bottom: -10%;
+  bottom: -30%;
   left: 50%;
   padding: 10px 20px;
   background: var(--white);
-  color: var(--pink);
+  color: var(--white);
   font-size: var(--font16);
   transform: translateX(-50%);
   border-radius: 10px;
+  transition: all 0.5s ease 0.2s;
+}
+.explore .tour-box .img-box:hover span{
+  bottom: -10%;
+  color: var(--pink);
 }
 .explore .tour-box i{
   position: absolute;
@@ -227,10 +235,13 @@ a{
   border-radius: 7px;
 }
 .explore .tour-box h3{
-  margin: 40px 0 20px;
+  margin: 40px 0 10px;
+  height: 50px;
   font-size: var(--font18);
 }
-
+.white{
+  color: var(--white);
+}
 .explore .tour-box p{
   margin-bottom: 30px;
   font-size: var(--font16);
@@ -239,6 +250,11 @@ a{
   border: 0;
   background: var(--ligtgrey);
   color: var(--grey);
+  transition: all 0.5s ease 0.1s;
+}
+.explore .tour-box .btn:hover{
+  background: var(--pink);
+  color: var(--white);
 }
 .explore .view.btn{
   display: inline-block;
@@ -306,6 +322,11 @@ a{
   border: 0;
   background: transparent;
   transform: translateY(-50%);
+  transition: all 0.4s ease-out 0.2s;
+}
+.subscribe .mail-box button:hover{
+  width: 45px;
+  height: 45px;
 }
 .subscribe .sub-img{
   width: 30%;
@@ -369,7 +390,7 @@ a{
 .sticky{
   position: fixed;
   right: 4%;
-  bottom: 0;
+  bottom: 20px;
 }
 .sticky i{
   padding: 7px 10px;
@@ -384,7 +405,7 @@ a{
   /* header */
   .header .inner .nav-item2{
     position: absolute;
-    top: -100vh;
+    top: -1000px;
     left: 0;
     flex-direction: column;
     justify-content: space-between;
@@ -398,7 +419,7 @@ a{
   }
   .header .nav-item2 .list{
     flex-direction: column;
-    margin: 0 auto;
+    margin: 0 auto 30px;
     gap: 20px 0;
   }
   .header .nav-item2 li{
@@ -461,6 +482,9 @@ a{
   }
   .explore .tours .tour-box:nth-child(4) ~ div {
     display: none;
+  }
+  .explore .tour-box .img-box span{
+    bottom: -20%;
   }
 
   /* subscribe */
