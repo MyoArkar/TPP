@@ -115,7 +115,7 @@ header.container{
 header .inner{
   display: flex;
   position: absolute;
-  top: 40px;
+  top: 20px;
   left: 50%;
   justify-content: space-between;
   align-items: center;
@@ -140,8 +140,7 @@ header ul li a{
 }
 /* banner */
 .banner{
-  height: 900px;
-  padding: 290px 0 0;
+  padding: 135px 0;
   background-image: url(../images/pri_bg.png);
   background-size: cover;
   background-position: center;
@@ -190,6 +189,7 @@ header ul li a{
 .cmn-content .box2 img{
   width: 100%;
   vertical-align: middle;
+  height: 604px;
 }
 
 /* services */
@@ -230,8 +230,7 @@ header ul li a{
 }
 /* play */
 .play{
-  height: 601px;
-  padding-top: 212px;
+  padding: 160px 0;
   background-image: url(../images/sec_bg.png);
   background-size: cover;
   background-position: center;
