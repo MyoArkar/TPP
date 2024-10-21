@@ -1,0 +1,281 @@
+/* 
+header
+ dancing script 28 b #D9F0FF
+ popping 12 m #D9F0FF
+
+banner
+  lato 100 l #FFFFFF
+  popping 18 r #FFFFFF 0.7
+  lato 14 b btn #325DFF
+
+cmn-section
+  lato 50 l #000000
+  popping 16 r #000000 0.5
+  lato 14 b btn #325DFF
+
+services
+  lato 35 l
+  popping 16 r #000000 0.65
+
+  boxes
+    lato 18 r #000000 0.8
+    popping 16 r #000000 0.65
+
+play
+  lato 35 l
+  popping 16 r
+
+feature
+  lato 35 l
+  popping 16 r
+*/
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+  --font-family-icon:"Dancing Script", sans-serif;
+  --font-family-primary:"Lato", sans-serif;
+  --font-family-secondary:"Poppins", sans-serif;
+  --font-size-12: 12px;
+  --font-size-14: 14px;
+  --font-size-16: 16px;
+  --font-size-18: 18px;
+  --font-size-20: 20px;
+  --font-size-28: 28px;
+  --font-size-35: 35px;
+  --font-size-50: 50px;
+  --font-size-100: 100px;
+  --font-weight-light:300;
+  --font-weight-regular:400;
+  --font-weight-medium:500;
+  --font-weight-bold:700;
+  --color-whitesmoke:#FAFAFA;
+  --color-white:#FFFFFF;
+  --color-white-opicaty-5:rgba(255, 255, 255, 0.52);
+  --color-white-opicaty-7:rgba(255, 255, 255, 0.7);
+  --color-black:#000000;
+  --color-black-opicaty-5:rgba(0, 0, 0, 0.5);
+  --color-black-opicaty-6:rgba(0, 0, 0, 0.65);
+  --color-black-opicaty-8:rgba(0, 0, 0, 0.8);
+  --color-Calcareous-Sinter:#D9F0FF;
+  --color-Gentian-Flower:#325DFF;
+  --color-Flora:#CECECE;
+  --container:1280px;
+  --inner:1068px;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: var(--color-whitesmoke);
+  color: var(--color-black);
+  font-family: var(--font-family-secondary);
+  font-size: var(--font-size-16);
+  font-weight: var(--font-weight-regular);
+}
+
+a{
+  text-decoration: none;
+}
+ul{
+  list-style: none;
+}
+.container{
+  margin: 0 auto;
+  max-width: var(--container);
+}
+.inner{
+  margin: 0 auto;
+  max-width: var(--inner);
+}
+.btn{
+  padding: 27px 45px 23px;
+  border: 1px solid transparent;
+  background: var(--color-Gentian-Flower);
+  color: var(--color-white);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-14);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 3px;
+  transition: all 0.3s ease-in 0.2s;
+  border-radius: 36px;
+}
+.btn:hover{
+  border: 1px solid var(--color-Gentian-Flower);
+  background: var(--color-white);
+  color: var(--color-Gentian-Flower);
+}
+/* header */
+header.container{
+  position: relative;
+}
+header .inner{
+  display: flex;
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  transform: translateX(-50%);
+}
+header a{
+  color:var(--color-Calcareous-Sinter) ;
+}
+header h1{
+  font-size: var(--font-size-28);
+  font-weight: var(--font-weight-bold);
+}
+header nav ul{
+  display: flex;
+  justify-content: space-between;
+  gap: 0 30px;
+}
+header ul li a{
+  font-size: var(--font-size-12);
+  font-weight: var(--font-weight-medium);
+}
+/* banner */
+.banner{
+  height: 900px;
+  padding: 290px 0 0;
+  background-image: url(../images/pri_bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.banner .content{
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+.banner .content h2{
+  color: var(--color-white);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-100);
+  font-weight: var(--font-weight-light);
+}
+.banner .content p{
+  margin: 35px 0 50px;
+  color: var(--color-white-opicaty-7);
+  font-size: var(--font-size-18);
+}
+
+
+/* cmn-content */
+ .cmn-content{
+  display: flex;
+}
+.cmn-content .box1, .cmn-content .box2{
+  width: 50%;
+  height: 604px;
+}
+.cmn-content .box1{
+  padding: 105px 96px 0 83px;
+  background: var(--color-white);
+}
+.cmn-content .box1 h2{ 
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-50);
+  font-weight: var(--font-weight-light);
+}
+.cmn-content .box1 p{
+  margin: 85px 0;
+  color: var(--color-black-opicaty-5);
+  font-size: var(--font-size-16);
+}
+.cmn-content .box2 img{
+  width: 100%;
+  vertical-align: middle;
+}
+
+/* services */
+
+.services {
+  padding: 77px 0 105px;
+  text-align: center;
+}
+.services h2{
+  margin-bottom: 24px;
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-35);
+  font-weight: var(--font-weight-light);
+}
+.services p{
+  color: var(--color-black-opicaty-6);
+}
+
+.services .service-items{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 90px;
+  gap: 25px 30px;
+}
+.services .service-items .item{
+  width: calc(calc(100% / 3) - 30px );
+  padding: 60px 50px 50px;
+  border: 0.5px solid var(--color-Flora);
+  background: var(--color-white);
+}
+.service-items .item img{
+  width: 88px;
+  height: 88px;
+}
+.service-items .item h3{
+   margin: 20px 0;
+}
+/* play */
+.play{
+  height: 601px;
+  padding-top: 212px;
+  background-image: url(../images/sec_bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--color-white);
+}
+.play .play-content{
+  width: 65%;
+  margin: 0 auto;
+  text-align: center;
+}
+.play img{
+  width: 44px;
+  height: 56px;
+}
+.play h2{
+  margin: 75px 0 20px;
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-35);
+  font-weight: var(--font-weight-light);
+}
+/* projects */
+.projects{
+  padding-top: 85px;
+}
+.projects .pro-header{
+  width: 65%;
+  margin: 0 auto 90px;
+  text-align: center;
+}
+.projects .pro-header h2{
+  margin-bottom: 20px;
+  font-family: var(--font-family-primary);
+  font-size:  var(--font-size-35);
+  font-weight: var(--font-weight-light);
+}
+.projects .cmn-content:nth-child(odd){
+  flex-direction: row-reverse;
+}
+/* footer */
+footer{
+  padding:60px 0;
+  background: var(--color-Gentian-Flower);
+  color: var(--color-white-opicaty-5);
+  font-size: var(--font-size-20);
+  text-align: center;
+}
