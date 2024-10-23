@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <form action="#" class="form" id="form">
+    <div>
+      <label for="first_name">First Name:</label>
+      <div><input type="text" name="first_name" id="first_name">
+      </div>
+    </div>
+    <div>
+      <label for="last_name">Last Name:</label>
+      <div><input type="text" name="last_name" id="last_name">
+      </div>
+    </div>
+    <div>
+      <label for="id_num">ID:</label>
+      <div><input type="text" name="id" id="id_num">
+      </div>
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      <div><input type="email" name="email" id="email">
+      </div>
+    </div>
+    <div>
+      <label for="password">Password:</label>
+      <div><input type="password" name="password" id="password">
+      </div>
+    </div>
+    <div>
+      <label for="con_password">Confirm Password:</label>
+      <div><input type="password" name="con_password" id="con_password">
+      </div>
+    </div>
+    <button id="submit">Submit</button>
+  </form>
+
+  <script>
+    document.getElementById("form").addEventListener('submit',function(event){
+      event.preventDefault();
+      document.querySelectorAll(".errmsg").forEach(function(msg){
+        msg.textContent = "";
+      });
+      document.querySelectorAll("span").forEach(function(star){
+        star.textContent = "";
+      });
+      let inputs = document.querySelectorAll('input');
+      
+      for(let i = 0; i < inputs.length; i++)
+      {
+        let input = inputs[i];
+        let label = document.querySelector(`label[for="${input.id}"]`)
+        let parent = input.parentElement;
+        
+        if(input.value.length <= 0){
+          let errmsg = document.createElement("p");
+          errmsg.classList.add("errmsg");
+          errmsg.textContent = `${label.textContent} is Required`;
+          parent.appendChild(errmsg);
+          label.innerHTML += "<span>*</span>";
+        }else{
+          continue;
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>

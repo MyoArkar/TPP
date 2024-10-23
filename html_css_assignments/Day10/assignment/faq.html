@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="faq">
+    <h1>Frequently Ask Questions</h1>
+    <div class="item">
+      <div class="title">
+        <h2>FAQ1</h2>
+        <span class="sign">+</span>
+      </div>
+      <div class="description">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Repudiandae reprehenderit voluptas laboriosam iure. Voluptas
+        architecto hic reiciendis enim corporis? Eum neque mollitia
+        repellat minus quaerat eligendi. Odio blanditiis molestias consectetur.
+      </div>
+    </div>
+    <div class="item">
+      <div class="title">
+        <h2>FAQ2</h2>
+        <span class="sign">+</span>
+      </div>
+      <div class="description">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Repudiandae reprehenderit voluptas laboriosam iure. Voluptas
+        architecto hic reiciendis enim corporis? Eum neque mollitia
+        repellat minus quaerat eligendi. Odio blanditiis molestias consectetur.
+      </div>
+    </div>
+    <div class="item">
+      <div class="title">
+        <h2>FAQ3</h2>
+        <span class="sign">+</span>
+      </div>
+      <div class="description">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Repudiandae reprehenderit voluptas laboriosam iure. Voluptas
+        architecto hic reiciendis enim corporis? Eum neque mollitia
+        repellat minus quaerat eligendi. Odio blanditiis molestias consectetur.
+      </div>
+    </div>
+    <div class="item">
+      <div class="title">
+        <h2>FAQ4</h2>
+        <span class="sign">+</span>
+      </div>
+      <div class="description">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Repudiandae reprehenderit voluptas laboriosam iure. Voluptas
+        architecto hic reiciendis enim corporis? Eum neque mollitia
+        repellat minus quaerat eligendi. Odio blanditiis molestias consectetur.
+      </div>
+    </div>
+    <div class="item">
+      <div class="title">
+        <h2>FAQ5</h2>
+        <span class="sign">+</span>
+      </div>
+      <div class="description">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Repudiandae reprehenderit voluptas laboriosam iure. Voluptas
+        architecto hic reiciendis enim corporis? Eum neque mollitia
+        repellat minus quaerat eligendi. Odio blanditiis molestias consectetur.
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded',function(){
+      let titles = document.getElementsByClassName("title");
+    let descriptions = document.getElementsByClassName("description");
+    let signs = document.getElementsByClassName("sign");
+   
+
+    for(let i = 0 ; i < titles.length; i++) {
+      descriptions[i].style.display = "none";
+      titles[i].addEventListener('click',function(){
+        if (descriptions[i].style.display == "none") {
+        descriptions[i].style.display = "block";
+        signs[i].innerHTML = "-";
+      } else {
+        descriptions[i].style.display = "none";
+        signs[i].innerHTML = "+";
+      }
+      });
+    };
+    });
+    
+  </script>
+</body>
+
+</html>
