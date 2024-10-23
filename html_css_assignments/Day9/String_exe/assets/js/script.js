@@ -3,8 +3,12 @@ function exe1() {
   let user_name = String(document.getElementById("user_name").value);
   let age = String(document.getElementById("age").value);
   let result = "";
+  function upcase(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+  }
   if (user_name) {
-    result += `Your name is ${user_name}.`;
+    
+    result += `Your Name is ${upcase(user_name)}`;
   }
   if (age) {
     result += `You are  ${age} years old.`;

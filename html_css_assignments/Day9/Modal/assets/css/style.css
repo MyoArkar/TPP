@@ -146,8 +146,7 @@ header #menu-bar{
   z-index: 999;
 }
 .updown{
-  right: 0;
-  display: flex;
+  left: 0;
 }
 /* banner */
 .banner{
@@ -330,6 +329,23 @@ footer{
   font-size: var(--font-size-20);
   text-align: center;
 }
+@media screen and (max-width: 992px) {
+   /* services */
+   .services {
+    padding: 57px 0 85px;
+    text-align: center;
+  }
+  .services .service-items{
+    margin-top: 70px;
+    gap: 25px 20px;
+  }
+  .services .service-items .item{
+    width: calc(calc(100% / 2) - 20px );
+    padding: 40px 30px 30px;
+    border: 0.5px solid var(--color-Flora);
+    background: var(--color-white);
+  }
+}
 @media screen and (max-width: 576px) {
   
   .btn{
@@ -338,10 +354,9 @@ footer{
   }
   /* header */
   header nav ul{
-    display: none;
     position: absolute;
     top: 0;
-    right: -500px;
+    left: -500px;
     flex-direction: column;
     width: 50%;
     padding: 120px 0;
@@ -376,21 +391,7 @@ footer{
     background: var(--color-white-opicaty-5);
     position: absolute;
   }
-  /* services */
-  .services {
-    padding: 57px 0 85px;
-    text-align: center;
-  }
-  .services .service-items{
-    margin-top: 70px;
-    gap: 25px 20px;
-  }
-  .services .service-items .item{
-    width: calc(calc(100% / 2) - 20px );
-    padding: 40px 30px 30px;
-    border: 0.5px solid var(--color-Flora);
-    background: var(--color-white);
-  }
+ 
   /* play */
   .play{
     padding: 100px 0;
