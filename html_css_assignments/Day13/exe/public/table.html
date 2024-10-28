@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dash Board</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="fixed top-0 w-full bg-white shadow-lg py-4">
+    <nav class=" flex justify-between items-center"> 
+      <div>
+        <button id="menu-bar"><i class="fa-solid fa-bars"></i></button>
+        <a href="#" class="font-dancing text-4xl text-orange">DashBoard</a>
+      </div>
+      <ul class="flex gap-14">
+        <li><a href="#"><i class="fa-solid fa-envelope"></i></a></li>
+        <li><a href=""><i class="fa-solid fa-bell"></i></a></li>
+        <li><a href=""><i class="fa-solid fa-user"></i></a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="mt-[72px] flex">
+    <aside>
+      <ul>
+        <li><a href="index.html">
+          <i class="fa-solid fa-chart-simple"></i>
+          Home</a></li>
+        <li><a href="table.html">
+          <i class="fa-solid fa-table-list"></i>
+          Table</a></li>
+        <li><a href="#">
+          <i class="fa-solid fa-table-list"></i>
+          Product</a></li>
+        <li><a href="#">
+          <i class="fa-solid fa-table-columns"></i>
+          Faq</a></li>
+        <li><a href="contact.html">
+          <i class="fa-solid fa-table-columns"></i>
+          Contact</a></li>
+      </ul>
+    </aside>
+    <div id="main-container" class="table">
+      <div class="px-3 py-2">
+        <div class="grid grid-cols-2 gap-3 *:bg-white">
+          <div class="px-2 pb-4 rounded shadow-lg">
+            <h2 class="text-md font-bold">Default Table</h2>
+            <table>
+              <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Age</th>
+                <th>Start Date</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Brandon Jacob</td>
+                <td>Designer</td>
+                <td>28</td>
+                <td>2016-05-25</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Bride Kessler</td>
+                <td>Developer</td>
+                <td>35</td>
+                <td>2014-05-25</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Asheligh Langosh</td>
+                <td>Finance</td>
+                <td>45</td>
+                <td>2011-08-12</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Angus Grady</td>
+                <td>HR</td>
+                <td>34</td>
+                <td>2012-06-11</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Raheem Lehner</td>
+                <td>Dynamic Division Officer</td>
+                <td>47</td>
+                <td>2011-04-19</td>
+              </tr>
+            </table>
+          </div>
+          <div class="px-2 pb-4 rounded shadow-lg">
+            <h2 class="text-md font-bold">Table with stripped rows</h2>
+            <table class="strip">
+              <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Age</th>
+                <th>Start Date</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Brandon Jacob</td>
+                <td>Designer</td>
+                <td>28</td>
+                <td>2016-05-25</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Bride Kessler</td>
+                <td>Developer</td>
+                <td>35</td>
+                <td>2014-05-25</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Asheligh Langosh</td>
+                <td>Finance</td>
+                <td>45</td>
+                <td>2011-08-12</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Angus Grady</td>
+                <td>HR</td>
+                <td>34</td>
+                <td>2012-06-11</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Raheem Lehner</td>
+                <td>Dynamic Division Officer</td>
+                <td>47</td>
+                <td>2011-04-19</td>
+              </tr>
+            </table>
+          </div>
+          <div class="px-2 pb-4 rounded shadow-lg">
+            <h2 class="text-md font-bold">Dark Table</h2>
+            <table class="dark">
+              <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Age</th>
+                <th>Start Date</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Brandon Jacob</td>
+                <td>Designer</td>
+                <td>28</td>
+                <td>2016-05-25</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Bride Kessler</td>
+                <td>Developer</td>
+                <td>35</td>
+                <td>2014-05-25</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Asheligh Langosh</td>
+                <td>Finance</td>
+                <td>45</td>
+                <td>2011-08-12</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Angus Grady</td>
+                <td>HR</td>
+                <td>34</td>
+                <td>2012-06-11</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Raheem Lehner</td>
+                <td>Dynamic Division Officer</td>
+                <td>47</td>
+                <td>2011-04-19</td>
+              </tr>
+            </table>
+          </div>
+          <div class="px-2 pb-4 rounded shadow-lg">
+            <h2 class="text-md font-bold">Table with Hoverable rows</h2>
+            <table class="hover-table">
+              <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Age</th>
+                <th>Start Date</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Brandon Jacob</td>
+                <td>Designer</td>
+                <td>28</td>
+                <td>2016-05-25</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Bride Kessler</td>
+                <td>Developer</td>
+                <td>35</td>
+                <td>2014-05-25</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Asheligh Langosh</td>
+                <td>Finance</td>
+                <td>45</td>
+                <td>2011-08-12</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Angus Grady</td>
+                <td>HR</td>
+                <td>34</td>
+                <td>2012-06-11</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Raheem Lehner</td>
+                <td>Dynamic Division Officer</td>
+                <td>47</td>
+                <td>2011-04-19</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <footer class="bg-gray flex justify-between items-center py-4">
+        <p>Copy &#169; Right 2024</p>
+        <ul class="flex justify-between gap-4">
+          <li><a href="#">Privacy policy</a></li>
+          <li><a href="#">Terms & Condition</a></li>
+        </ul>
+      </footer>
+    </div>
+  </main>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
