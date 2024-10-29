@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MultiForm</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <div class="px-3 py-2">
+    <div>
+      <h2>Multi Form</h2>
+      <div class="mt-4 gap-3 contact">
+
+        <form action="#" class="p-4 bg-white flex flex-col justify-between items-center gap-3 shadow-md rounded-lg" id="form">
+          <div class="form-group fullwidth">
+            <label for="name">Your Name</label>
+            <input type="text" name="name">
+          </div>
+          <div class="grid grid-cols-2 gap-2 w-full">
+            <div class="form-group fullwidth">
+              <label for="email">Email</label>
+              <input type="email" name="email">
+            </div>
+            <div class="form-group fullwidth">
+              <label for="password">Password</label>
+              <input type="password" name="password">
+            </div>
+
+          </div>
+          <div class="form-group fullwidth fullwidth">
+            <label for="address">Address</label>
+            <input type="text" name="address">
+          </div>
+          <div class="form-group fullwidth">
+            <label for="address">Address2</label>
+            <input type="text" name="address">
+          </div>
+          <div class="flex justify-between gap-2 w-full">
+            <div class="form-group w-3/6">
+              <label for="city">City</label>
+              <input type="text" name="city">
+            </div>
+            <div class="form-group w-2/6">
+              <label for="state">State</label>
+              <select name="state" id="state">
+                <option value="">Choose...</option>
+                <option value="state1">State1</option>
+                <option value="state2">State2</option>
+                <option value="state3">State3</option>
+              </select>
+            </div>
+            <div class="form-group 1/6">
+              <label for="zip">Zip</label>
+              <input type="number" name="zip">
+            </div>
+          </div>
+          <div class="w-full flex justify-center gap-4">
+            <button type="submit" class="btn" id="submit">Send Message</button>
+            <button type="reset" class="btn" id="reset">Reset</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="assets/js/multi_form.js"></script>
+</body>
+
+</html>

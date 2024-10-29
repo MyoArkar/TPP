@@ -37,7 +37,7 @@
   #main-container.active{
     @apply w-full ml-0;
 } 
-  .contact .form-group{
+  .contact .form-group.fullwidth{
     @apply w-full;
   }
   .contact .err{
@@ -46,14 +46,17 @@
   .contact p{
     @apply font-thin text-sm text-black;
   }
-  .contact input, .contact textarea{
+  .contact input, .contact textarea, .contact select{
     @apply w-full border-2 border-whitesmoke p-2;
   }
   .contact textarea{
     @apply h-40;
   }
   .btn{
-    @apply py-2 w-2/5 bg-blue text-whitesmoke rounded-md;
+    @apply py-2 w-1/2 bg-blue text-whitesmoke rounded-md;
+  }
+  .btn#reset{
+    @apply bg-black;
   }
   .table table{
     @apply w-full;
