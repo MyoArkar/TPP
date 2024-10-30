@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+  :root{
+    --dancing : 'Dancing Script';
+    --lato : 'Lato';
+    --poppings : 'Poppins';
+    --black: #212121;
+    --white: #fff;
+    --orange: #ff9933;
+    --gray: #ddd;
+    --whitesmoke:#f3f3f3;
+    --darkwhite:#b8b7b7ab;
+    --blue:rgb(102, 102, 221);
+    --yellow: #ffffc5;
+  }
+  body{
+    @apply font-poppins text-black  bg-whitesmoke;
+  }
+  h1,h2,h3{
+    @apply font-lato;
+  }
+}
+@layer components{
+  aside{
+    @apply pl-4 pt-4 w-1/5 bg-black text-white fixed left-0 h-custom overflow-auto transition-all;
+  }
+  aside.active{
+    @apply -left-1/2;
+  }
+  #main-container{
+    @apply w-4/5 ml-[20%] flex flex-col justify-between h-custom transition-all;
+  }
+  #main-container.active{
+    @apply w-full ml-0;
+} 
+  .contact .form-group.fullwidth{
+    @apply w-full;
+  }
+  .contact .err{
+    @apply text-orange text-lg font-bold;
+  }
+  .contact p{
+    @apply font-thin text-sm text-black;
+  }
+  .contact input, .contact textarea, .contact select{
+    @apply w-full border-2 border-whitesmoke p-2;
+  }
+  .contact textarea{
+    @apply h-40;
+  }
+  .btn{
+    @apply py-2 w-1/2 bg-blue text-whitesmoke rounded-md;
+  }
+  .btn#reset{
+    @apply bg-black;
+  }
+  .table table{
+    @apply w-full;
+  }
+  .table tr{
+    @apply border-b border-orange;  
+  }
+  .table th{
+    @apply text-start text-sm;
+  }
+  .table td{
+    @apply text-sm;
+  }
+  
+  .table th, .table td{
+    @apply py-2 pl-1;
+  }
+  .strip tr{
+    @apply even:bg-yellow;
+  }
+  table.dark{
+    @apply bg-black text-white;
+  }
+  table.dark tr{
+    @apply border-white;
+  }
+  .hover-table tr{
+    @apply hover:bg-yellow;
+  }
+  .product .product-item{
+    @apply border bg-white rounded-lg shadow-md;
+  }
+
+  .faq .title{
+    @apply flex justify-between border-b-2 border-yellow pb-2;
+  }
+  .faq .description{
+    @apply text-sm font-medium text-darkwhite p-2 hidden;
+  }
+  .faq .description.active{
+    @apply block;
+  }
+  .tab-item.active{
+    @apply border-b-2 border-orange;
+  }
+  .content.active{
+    @apply block;
+  }
+  .submenu{
+    @apply bg-darkwhite;
+  }
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dash Board</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="fixed top-0 w-full bg-white shadow-lg py-4">
+    <nav class=" flex justify-between items-center"> 
+      <div>
+        <button id="menu-bar"><i class="fa-solid fa-bars"></i></button>
+        <a href="#" class="font-dancing text-4xl text-orange">DashBoard</a>
+      </div>
+      <ul class="flex gap-14">
+        <li><a href="#"><i class="fa-solid fa-envelope"></i></a></li>
+        <li><a href=""><i class="fa-solid fa-bell"></i></a></li>
+        <li><a href=""><i class="fa-solid fa-user"></i></a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="mt-[72px] flex">
+    <aside>
+      <ul>
+        <li class="side">
+          <a href="#">
+          <i class="fa-solid fa-chart-simple"></i>
+          Home</a>
+        </li>
+        <li class="side"><a href="#">
+          <i class="fa-solid fa-table-list"></i>
+          Table</a>
+        </li>
+        <li class="side" id="product"><a href="#">
+          <i class="fa-solid fa-table-list"></i>
+          Product</a>
+          <ul class="pl-6 hidden submenu">
+            <li><a href="#">Product1</a></li>
+            <li><a href="#">Product2</a></li>
+            <li><a href="#">Product3</a></li>
+          </ul>
+        </li>
+        <li class="side"><a href="#">
+          <i class="fa-solid fa-table-columns"></i>
+          Faq</a></li>
+        <li class="side" id="contact"><a href="#">
+          <i class="fa-solid fa-table-columns"></i>
+          Contact</a>
+          <ul class="pl-6 hidden submenu">
+            <li><a href="#">contact1</a></li>
+            <li><a href="#">contact2</a></li>
+            <li><a href="#">contact3</a></li>
+          </ul></li>
+      </ul>
+    </aside>
+    <div id="main-container">
+      <div class="px-3 py-2">
+        <div class="border border-darkwhite shadow-lg px-2 pt-2"> 
+          <ul class="flex gap-3 border-b-2 border-darkwhite">
+            <li class="tab-item" data-field="tab1">Overview</li>
+            <li class="tab-item" data-field="tab2">Setting</li>
+            <li class="tab-item" data-field="tab3">Change Password</li>
+          </ul>
+          <div class="p-3 hidden content" id="tab1">
+            <h2 class="text-xl font-bold mb-1">Overview Content</h2>
+            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates dolorem possimus illum voluptatibus expedita ipsum nisi recusandae reiciendis consectetur, tempora cupiditate deserunt itaque doloribus maiores amet inventore aliquam ullam quo!</div>
+          </div>
+          <div class="p-3 hidden content" id="tab2">
+            <h2 class="text-xl font-bold mb-1">Setting Content</h2>
+            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates dolorem possimus illum voluptatibus expedita ipsum nisi recusandae reiciendis consectetur, tempora cupiditate deserunt itaque doloribus maiores amet inventore aliquam ullam quo!</div>
+          </div>
+          <div class="p-3 hidden content" id="tab3">
+            <h2 class="text-xl font-bold mb-1">Change Password Content</h2>
+            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates dolorem possimus illum voluptatibus expedita ipsum nisi recusandae reiciendis consectetur, tempora cupiditate deserunt itaque doloribus maiores amet inventore aliquam ullam quo!</div>
+          </div>
+        </div>
+        
+      </div>
+      <footer class="bg-gray flex justify-between items-center py-4">
+        <p>Copy &#169; Right 2024</p>
+        <ul class="flex justify-between gap-4">
+          <li><a href="#">Privacy policy</a></li>
+          <li><a href="#">Terms & Condition</a></li>
+        </ul>
+      </footer>
+    </div>
+  </main>
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/tab.js"></script>
+</body>
+</html>

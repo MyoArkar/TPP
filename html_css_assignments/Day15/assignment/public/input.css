@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+  :root{
+    --raleway : 'Raleway';
+    --roboto : 'Roboto';
+    --poppings : 'Poppins';
+    --black: #444444;
+    --white: #fff;
+    --white5: #ffffff9d;
+    --blue: #1977cc;
+    --light-blue:#3c9bed;
+    --pale-blue:#f1f7fc;
+    --green:#2c4964;
+  }
+  body{
+    @apply font-roboto text-black  bg-white;
+  }
+  h1,h2,h3{
+    @apply font-poppins text-green;
+  }
+  header{
+    @apply text-green;
+  }
+  nav{
+    @apply font-raleway;
+  }
+}
+@layer components{
+  .btn{
+    @apply text-white bg-blue rounded-full px-3 py-1;
+  }
+}
