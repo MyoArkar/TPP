@@ -1,36 +1,44 @@
 document.addEventListener('DOMContentLoaded', function () {
-  let menu = document.getElementById('menu-bar');
-  let aside = document.getElementsByTagName('aside')[0];
-  let container = document.getElementById('main-container');
+  let navi = document.getElementsByClassName('navi')[0].children;
+  
+  //Department
+  Array.from(navi).forEach(function (navi_child) {
+    navi_child.addEventListener('click', function () {
+      let department = document.getElementById(navi_child.getAttribute('data-field'));
+      //console.log(department);
+      //console.log(navi_child.getAttribute('data-field'));
+      Array.from(navi).forEach(function (navi_child) {
+        let department = document.getElementById(navi_child.getAttribute('data-field'));
+        navi_child.classList.remove('active');
+        department.classList.remove('active');
+      });
+        navi_child.classList.toggle('active');
+        department.classList.toggle('active');
+    });
+  })
+ 
+  //FAQ
+  let faq = document.getElementsByClassName('faq-item');
 
-  menu.addEventListener('click', function () {
-    aside.classList.toggle('active');
-    container.classList.toggle('active');
+  Array.from(faq).forEach(function (faq_item) {
+    faq_item.addEventListener('click', function () {
+      faq_item.classList.toggle('active');
+    });
   });
 
-  let form = document.getElementById('form');
-  let formGroup = document.getElementsByClassName('form-group');
-  
-  //Array.from(formGroup).forEach(function (input) {
-  //  console.log(input);
-  //});
-  //Array.from(formGroup).map(function (input) {
-  //  console.log(input);
-  //});
-  if (form) {
+    //Form
+    let form = document.getElementById('form');
+    let inputGroup = document.getElementsByClassName('input-box');
     form.addEventListener('submit', function (event) {
       event.preventDefault();
-      //document.querySelectorAll(".err").forEach(function(msg){
-      //  msg.textContent = "";
-      //});
-      for (let input of formGroup) {
+
+      for (let input of inputGroup) {
         if (input.lastElementChild.classList.contains('err')) {
           input.lastElementChild.remove();
         }
-        //console.log(input.lastElementChild.classList.contains('err'));
       }
-      Array.from(formGroup).forEach(function (input) {
-        //console.log(input.firstElementChild.value);
+      Array.from(inputGroup).forEach(function (input) {
+        
         let inputValue = input.firstElementChild.value.trim();
         let nameValue = input.firstElementChild.getAttribute('name');
   
@@ -41,23 +49,6 @@ document.addEventListener('DOMContentLoaded', function () {
           input.appendChild(errmsg);
         }
       });
-  
+      
     });
-  }
-  
-//  fetchAPI();
-//  function fetchAPI() {
-//    fetch('https://dummyjson.com/products/category/smartphones', {
-//      method: 'GET'
-//    })
-//      .then(response => {
-//        console.log(response);
-//        if (!response.ok) {
-//          throw new Error("network error");
-//        }
-//        return response.json();
-//      });
-  //  }
-
-  
 });

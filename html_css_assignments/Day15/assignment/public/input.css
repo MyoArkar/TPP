@@ -31,6 +31,77 @@
 }
 @layer components{
   .btn{
-    @apply text-white bg-blue rounded-full px-3 py-1;
+    @apply border-2 border-blue text-white bg-blue rounded-full px-3 py-1 hover:text-blue hover:bg-white transition-all duration-700;
+  }
+  /* header */
+  header .list-item{
+    @apply pb-1 relative overflow-hidden after:content-[''] after:w-full after:h-[2px] after:bg-blue after:rounded-xl after:absolute after:bottom-0 after:-left-[100%] after:hover:left-0 after:transition-all after:duration-700;
+  }
+  
+  /* common title bar */
+  .bar{
+    @apply relative before:content-[''] before:w-32 before:h-[1.5px] before:bg-[#dee2e6] before:absolute before:bottom-[1px] before:left-1/2 before:-translate-x-1/2
+            after:content-[''] after:w-16 after:h-1 after:bg-blue after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2;
+  }
+  /* department */
+  .navi li{
+    @apply hover:text-blue;
+  }
+  .navi li.active{
+    @apply text-blue border-blue;
+  }
+  .department{
+    @apply hidden;
+  }
+  .department.active{
+    @apply block;
+  }
+  /* Faq section */
+  .faq-item{
+    @apply bg-white border-lightblue shadow-md py-5 px-4 rounded-lg transition-all;
+  }
+  .faq-item .title{
+    @apply flex justify-between items-center;
+  }
+  .faq-item:not(.active) .title h2{
+    @apply hover:text-blue;
+  }
+  .faq-item .content{
+    @apply hidden;
+  }
+  .faq-item.active{
+    @apply bg-blue *:text-white transition-all;
+  }
+  .faq-item.active .title{
+    @apply *:text-white mb-3;
+  }
+  .faq-item.active i{
+    @apply hidden;
+  }
+  .faq-item.active .content{
+    @apply block;
+  }
+
+  /* gallery */
+  .gallery-item{
+    @apply overflow-hidden;
+  }
+  .gallery-item img{
+    @apply hover:scale-110 transition-all duration-700;
+  }
+
+  /* Form */
+ 
+  .input-box input, .input-box textarea{
+    @apply border border-[#dee2e6] w-full py-3 pl-3 rounded-md outline-blue;
+  }
+  .input-box textarea{
+    @apply h-[150px];
+  }
+  #form .btn{
+    @apply px-6 py-3;
+  }
+  .err{
+    @apply text-blue;
   }
 }
