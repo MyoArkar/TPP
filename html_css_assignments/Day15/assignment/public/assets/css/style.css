@@ -848,6 +848,30 @@ header .list-item:hover::after{
   top: 50%;
 }
 
+.top-0{
+  top: 0px;
+}
+
+.-left-0{
+  left: -0px;
+}
+
+.-left-\[20\%\]{
+  left: -20%;
+}
+
+.-left-\[10\%\]{
+  left: -10%;
+}
+
+.z-50{
+  z-index: 50;
+}
+
+.z-30{
+  z-index: 30;
+}
+
 .my-2{
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
@@ -923,6 +947,26 @@ header .list-item:hover::after{
   height: 400px;
 }
 
+.h-full{
+  height: 100%;
+}
+
+.h-\[\]{
+  height: ;
+}
+
+.h-\[20px\]{
+  height: 20px;
+}
+
+.h-\[200px\]{
+  height: 200px;
+}
+
+.h-\[250px\]{
+  height: 250px;
+}
+
 .w-1\/5{
   width: 20%;
 }
@@ -965,6 +1009,22 @@ header .list-item:hover::after{
 
 .w-full{
   width: 100%;
+}
+
+.w-\[\]{
+  width: ;
+}
+
+.w-\[100\%\]{
+  width: 100%;
+}
+
+.w-\[\`2\]{
+  width: `2;
+}
+
+.w-\[120\%\]{
+  width: 120%;
 }
 
 .-translate-x-1\/2{
@@ -1060,6 +1120,10 @@ header .list-item:hover::after{
 
 .bg-white5{
   background-color: var(--white5);
+}
+
+.bg-black{
+  background-color: var(--black);
 }
 
 .bg-opacity-10{
