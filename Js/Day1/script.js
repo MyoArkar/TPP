@@ -11,6 +11,8 @@ function isValidPassword(password) {
   let upper = false;
   let digit = false;
   let symbol = false;
+  let lalpha = "qwertyuiopasdfghjklzxcvbnm";
+  let ualpha = lalpha.toUpperCase();
 
   if (password.length < 8) {
     console.log('invalid');
@@ -23,11 +25,11 @@ function isValidPassword(password) {
       } else if (symbols.includes(char)) {
         symbol = true;
       } else {
-
-        if (char === char.toUpperCase()) {
+         
+        if (ualpha.includes(char)) {
           upper = true;
         }
-        else if (char === char.toLowerCase()) {
+        else if (lalpha.includes(char)) {
           lower = true;
         }
       }
